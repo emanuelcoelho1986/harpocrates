@@ -22,6 +22,8 @@ dist-ssr
 *.sln
 *.sw?
 
+coverage
+
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate
