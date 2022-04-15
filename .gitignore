@@ -25,8 +25,17 @@ dist-ssr
 coverage
 
 
-# Created by https://www.toptal.com/developers/gitignore/api/webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate
-# Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate
+# Created by https://www.toptal.com/developers/gitignore/api/webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate,cypressio
+# Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate,cypressio
+
+### CypressIO ###
+# gitignore template for the CypressIO, browser test framework
+# website: https://www.cypress.io/
+
+cypress/results/*
+cypress/reports/*
+cypress/screenshots/*
+cypress/videos/*
 
 ### Firebase ###
 .idea
@@ -190,6 +199,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### macOS Patch ###
+# iCloud generated files
+*.icloud
+
 ### react ###
 .DS_*
 *.log
@@ -342,4 +355,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate
+# End of https://www.toptal.com/developers/gitignore/api/webstorm,linux,intellij,react,firebase,windows,macos,sublimetext,textmate,cypressio
