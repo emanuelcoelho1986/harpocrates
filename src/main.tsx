@@ -2,6 +2,9 @@ import { createRoot } from 'react-dom/client';
 
 import './index.css'
 import App from './App'
+import { devTools } from "@ngneat/elf-devtools";
+
+devTools();
 
 const container = document.getElementById('root');
 // Cast to avoid typing errors. document.getElementById returns HTMLElement which extends Element
