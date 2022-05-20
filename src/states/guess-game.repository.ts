@@ -1,6 +1,5 @@
 import { createStore, select, withProps } from "@ngneat/elf";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface GuessGameProps {
   hiddenNumber: number | undefined;
 }
