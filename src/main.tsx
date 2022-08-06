@@ -1,11 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client';
+
 import './index.css'
 import App from './App'
+import { devTools } from "@ngneat/elf-devtools";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+devTools();
+
+const container = document.getElementById('root');
+// Cast to avoid typing errors. document.getElementById returns HTMLElement which extends Element
+// and Element is what createRoot is expecting
+const root = createRoot(container as HTMLElement);
+root.render(<App />);
