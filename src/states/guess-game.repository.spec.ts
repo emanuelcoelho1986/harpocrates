@@ -1,4 +1,4 @@
-import { GuessGameRepository } from "./guess-game.repository";
+import { GuessGameRepository } from './guess-game.repository';
 
 describe('GuessGameRepository | Unit Test', () => {
   let guessingGameRepository: GuessGameRepository;
@@ -6,7 +6,7 @@ describe('GuessGameRepository | Unit Test', () => {
   beforeEach(() => {
     guessingGameRepository = new GuessGameRepository();
     guessingGameRepository.initHiddenNumber();
-  })
+  });
 
   it('should load store and have an hidden number', (done) => {
     guessingGameRepository.hiddenNumber$.subscribe({
@@ -17,7 +17,7 @@ describe('GuessGameRepository | Unit Test', () => {
 
         done();
       },
-      error: () => done.fail('Should not be here')
+      error: () => done.fail('Should not be here'),
     });
-  })
+  });
 });

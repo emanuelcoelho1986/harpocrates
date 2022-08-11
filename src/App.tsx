@@ -1,24 +1,20 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Outlet } from 'react-router-dom';
 
-import Routes from "routes/Routes";
+import AvailableRoutes from 'routes/AvailableRoutes';
 import NavigationBar from './components/NavigationBar';
 
-import "./index.css";
+import './index.css';
 import './App.css';
-
-
 
 function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
-        <NavigationBar />
-        <Routes />
-        <div className="app" />
+        <AvailableRoutes />
       </BrowserRouter>
-    </React.StrictMode>  
-  )
+    </React.StrictMode>
+  );
 }
 
-export default App
+export default App;

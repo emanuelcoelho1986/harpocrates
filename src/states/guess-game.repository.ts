@@ -1,4 +1,4 @@
-import { createStore, select, withProps } from "@ngneat/elf";
+import { createStore, select, withProps } from '@ngneat/elf';
 
 export interface GuessGameProps {
   hiddenNumber: number | undefined;
@@ -6,7 +6,7 @@ export interface GuessGameProps {
 
 // Store will be private and not available for external modifications. (Not directly)
 const store = createStore({ name: 'guessGame' }, withProps<GuessGameProps>({
-  hiddenNumber: undefined
+  hiddenNumber: undefined,
 }));
 
 export class GuessGameRepository {
@@ -19,4 +19,3 @@ export class GuessGameRepository {
     }));
   }
 }
-
