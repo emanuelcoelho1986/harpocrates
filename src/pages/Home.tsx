@@ -1,6 +1,6 @@
-import { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-export default class Home extends Component {
+export default class Home extends PureComponent {
   render() {
     return (
       <h1>Home Page</h1>
