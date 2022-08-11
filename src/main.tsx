@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
 
-import './index.css'
-import App from './App'
-import { devTools } from "@ngneat/elf-devtools";
+import './index.css';
+import { devTools } from '@ngneat/elf-devtools';
+import App from './App';
 
 devTools();
 
