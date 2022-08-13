@@ -1,9 +1,16 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
-export default class Home extends PureComponent {
-  render() {
-    return (
-      <h1>Home Page</h1>
-    );
+export default function Home() {
+
+  function didPressStartGame() {
+    console.log('Did press to start game');
   }
+
+  return (
+    <>
+      <h1>Home Page</h1>
+      <button onClick={didPressStartGame}>Start Game</button>
+    </>
+  );
 }
+
