@@ -1,13 +1,14 @@
-import { render, screen } from '@testing-library/react'
-
-import App from './App';
+import { render } from '@testing-library/react';
+import App from "./App";
 
 describe('<App />', () => {
-    beforeEach(() => {
-        render(<App />);
-    });
+  let container: HTMLElement;
 
-    it('should render App with default values', () => {
-        expect(screen.getByText(/Hello Vite \+ React!/i)).toBeInTheDocument();
-    })
-})
+  beforeEach(() => {
+    container = render(<App />).container;
+  });
+
+  it('should render App', () => {
+    expect(container.getElementsByClassName('app')).toHaveLength(1);
+  });
+});
