@@ -1,11 +1,22 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { AvailableRoutes } from '../routes/AvailableRoutes';
+import AvailableRoutesEnum from '../routes/AvailableRoutes.enum';
 
-export default function () {
+export default function NavigationBar() {
   return (
     <nav className="navigation-bar">
-      <NavLink to={AvailableRoutes.HOME} data-test-route={AvailableRoutes.HOME}>Home</NavLink>
-      <NavLink to={AvailableRoutes.GAME} data-test-route={AvailableRoutes.GAME}>Game</NavLink>
+      <NavLink
+        to={AvailableRoutesEnum.HOME}
+        data-test-route={AvailableRoutesEnum.HOME}
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to={AvailableRoutesEnum.GAME}
+        data-test-route={AvailableRoutesEnum.GAME}
+      >
+        Game
+      </NavLink>
     </nav>
   );
 }
