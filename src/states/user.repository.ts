@@ -2,9 +2,9 @@ import { createStore, select, withProps } from '@ngneat/elf';
 import { GuessGameProps } from './guess-game.repository';
 
 export interface UserProps {
-    name: string;
-    gamesPlayed: GuessGameProps[],
-    currentGame: GuessGameProps | null
+  name: string;
+  gamesPlayed: GuessGameProps[],
+  currentGame: GuessGameProps | null
 }
 
 const store = createStore({ name: 'user' }, withProps<UserProps>({

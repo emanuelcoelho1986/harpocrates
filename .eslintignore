@@ -1,0 +1,4 @@
+cypress/**/*.ts
+# States are organized according to Elf State Store.
+# Probably a new eslint only for them will be a nice thing to add
+src/states
