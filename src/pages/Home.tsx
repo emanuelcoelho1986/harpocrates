@@ -1,16 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import AvailableRoutesEnum from '../routes/AvailableRoutes.enum';
 
 export default function Home() {
+  const navigate = useNavigate();
 
   function didPressStartGame() {
-    console.log('Did press to start game');
+    navigate(AvailableRoutesEnum.GAME);
   }
 
   return (
     <>
       <h1>Home Page</h1>
-      <button onClick={didPressStartGame}>Start Game</button>
+      <button type="button" onClick={didPressStartGame}>Start Game</button>
     </>
   );
 }
-
