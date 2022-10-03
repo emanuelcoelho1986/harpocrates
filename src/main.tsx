@@ -1,9 +1,10 @@
 import React from 'react';
+import { devTools } from '@ngneat/elf-devtools';
 import { createRoot } from 'react-dom/client';
 
-import './index.css';
-import { devTools } from '@ngneat/elf-devtools';
 import App from './App';
+
+import './index.css';
 
 devTools();
 

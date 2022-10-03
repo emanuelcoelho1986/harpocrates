@@ -1,42 +1,30 @@
-import { createStore, select, withProps } from '@ngneat/elf';
-import { GuessGameProps } from './guess-game.repository';
+import { createStore, withProps } from '@ngneat/elf';
+import { withEntities, selectAllEntities, setEntities, addEntities, updateEntities, withUIEntities } from '@ngneat/elf-entities';
 
-export interface UserProps {
-  name: string;
-  gamesPlayed: GuessGameProps[],
-  currentGame: GuessGameProps | null
+export interface UserUI {
+  id: number;
 }
 
-const store = createStore({ name: 'user' }, withProps<UserProps>({
-  name: '',
-  gamesPlayed: [],
-  currentGame: null,
-}));
+export interface User {
+  id: number;
+}
 
-export class UserRepository {
-  $name = store.pipe(select((state) => state.name));
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface UserProps {
+}
 
-  $games = store.pipe(select((state) => state.gamesPlayed));
+export const store = createStore({ name: 'user' }, withProps<UserProps>({}), withEntities<User>(), withUIEntities<UserUI>());
 
-  $currentGame = store.pipe(select((state) => state.currentGame));
+export const user$ = store.pipe(selectAllEntities());
 
-  setName(name: string) {
-    store.update((state) => ({ ...state, name }));
-  }
+export function setUser(user: User[]) {
+  store.update(setEntities(user));
+}
 
-  addGame(game: GuessGameProps, isCurrentGame = false) {
-    store.update((state) => {
-      const games = [...state.gamesPlayed, game];
+export function addUser(user: User) {
+  store.update(addEntities(user));
+}
 
-      if (isCurrentGame) {
-        return { ...state, currentGame: game, gamesPlayed: games };
-      }
-
-      return { ...state, gamesPlayed: games };
-    });
-  }
-
-  setCurrentGame(game: GuessGameProps) {
-    store.update((state) => ({ ...state, currentGame: game }));
-  }
+export function updateUser(id: User['id'], user: Partial<User>) {
+  store.update(updateEntities(id, user));
 }

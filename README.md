@@ -16,9 +16,9 @@
 ### Technologies in use
 
 - React.v17
-- Akita Store (State Store)
 - Docker
 - Firebase
+- Elf State Store
 
 ## How to
 ### Start Dev
@@ -27,6 +27,6 @@
 
 ## Development Process
 
-I'm going to de
+TBD
 
 ## Deployment Strategy

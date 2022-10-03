@@ -14,4 +14,7 @@ module.exports = {
         "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
         "^.+\\.module\\.(css|sass|scss)$"
     ],
+    moduleNameMapper: {
+        "^.+\\.(css|less|scss)$": "babel-jest"
+    }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import AvailableRoutesEnum from '../routes/AvailableRoutes.enum';
+import AvailableRoutesEnum from "../../routes/AvailableRoutes.enum";
 
 export default function NavigationBar() {
   return (
