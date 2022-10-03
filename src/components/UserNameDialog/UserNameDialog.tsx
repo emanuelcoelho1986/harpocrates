@@ -1,3 +1,5 @@
+import './UserNameDialoge.scss';
+
 import React, { ChangeEvent, KeyboardEvent, useState } from 'react';
 
 export enum UserNameDialogButtons {
@@ -45,19 +47,9 @@ export default function UserNameDialog(
   }
 
   return (
-    <div>
+    <div id="username-dialog-container">
       <div
-        className="overlay"
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'lightgray',
-          opacity: 0.6,
-          display: isOpen ? 'inherit' : 'none',
-        }}
+        className={`overlay ${isOpen ? 'open' : ''}`}
       />
       <dialog open={isOpen}>
         <input

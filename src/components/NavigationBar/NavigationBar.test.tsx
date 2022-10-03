@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 
 import { BrowserRouter } from 'react-router-dom';
 import NavigationBar from './NavigationBar';
-import AvailableRoutesEnum from '../routes/AvailableRoutes.enum';
+import AvailableRoutesEnum from "../../routes/AvailableRoutes.enum";
 
 describe('<NavigationBar />', () => {
   const numberOfRoutesAvailable = Object.keys(AvailableRoutesEnum).length;

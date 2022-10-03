@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useObservable } from '@ngneat/react-rxjs';
-import UserNameDialog, { UserNameDialogButtons } from '../components/UserNameDialog';
 import AvailableRoutesEnum from '../routes/AvailableRoutes.enum';
 import {
   activeGame$, addGame, game$, GameStatusEnum, setActiveGameId,
 } from '../states/game.repository';
+import UserNameDialog, {UserNameDialogButtons} from "../components/UserNameDialog/UserNameDialog";
 
 export default function Game() {
   const navigate = useNavigate();
